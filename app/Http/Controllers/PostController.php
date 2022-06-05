@@ -17,10 +17,9 @@ class PostController extends Controller
             ->with(['posts' => $posts]);
     }
 
-    public function show($id)
+    //Implicit Binding
+    public function show(Post $post)
     {
-        $post = Post::findOrFail($id);
-
         return view('posts.show')
             ->with(['post' => $post]);
     }
