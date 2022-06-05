@@ -19,4 +19,8 @@ Route::get('/', [PostController::class, 'index'])
 
 //postを指定してあげるとidなどの設定不要
 Route::get('/posts/{post}', [PostController::class, 'show'])
-    ->name('posts.show');
+    ->name('posts.show')
+    ->where('post', '[0-9]+');
+
+Route::get('/posts/create', [PostController::class, 'create'])
+    ->name('posts.create');
