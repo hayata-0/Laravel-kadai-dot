@@ -1,3 +1,13 @@
+# 課題について
+##### first commitでLaravel 8入門 基本機能編の成果物をmasterにpushしました。
+##### feature/DBのブランチでLaravel 8入門 データベース編の成果物をmasterにpushしました。
+##### feature/CRUDのブランチでLaravel 8入門 CRUD処理編の成果物をmasterにpushしました。
+##### feature/relationのブランチでLaravel 8入門 リレーション編の成果物をmasterにpushしました。
+
+上記に記載した内容で課題の成果物を載せました。
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
