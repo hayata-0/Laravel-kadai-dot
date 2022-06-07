@@ -17,6 +17,22 @@
     </h1>
     <p>{!! nl2br(e($post->body)) !!}</p>
 
+    <h2>Comments</h2>
+    <ul>
+        <li>
+            <form method="post" action="{{ route('comments.store', $post) }}" class="comment-form">
+                @csrf
+                <input type="text" name="body">
+                <button>Add</button>
+            </form>
+        </li>
+        @foreach ($post->comments as $comment)
+            <li>
+                {{ $comment->body }}
+            </li>
+        @endforeach
+    </ul>
+
     <script>
         'use strict'; {
             document.getElementById('delete_post').addEventListener('submit', e => {
