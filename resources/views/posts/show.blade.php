@@ -30,6 +30,11 @@
     as $comment)
             <li>
                 {{ $comment->body }}
+                <form action="{{ route('comments.destroy', $comment) }}" method="post" class="delete-comment">
+                    @method('DELETE')
+                    @csrf
+                    <button class="btn">[x]</button>
+                </form>
             </li>
         @endforeach
     </ul>
@@ -44,6 +49,18 @@
                 }
 
                 e.target.submit();
+            });
+
+            document.querySelectorAll('.delete-comment').forEach(form => {
+                form.addEventListener('submit', e => {
+                    e.preventDefault();
+
+                    if (!confirm('Sure to delete?')) {
+                        return;
+                    }
+
+                    e.target.submit();
+                })
             });
         }
     </script>
